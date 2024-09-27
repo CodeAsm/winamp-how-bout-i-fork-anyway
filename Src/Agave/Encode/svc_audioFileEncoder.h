@@ -16,14 +16,7 @@ protected:
 	~svc_audioFileEncoder() {}
 public:
 	  static FOURCC getServiceType() { return svc_albumArtProvider::SERVICETYPE; }
-	/*
-	  General parameter notes (for all methods of this class):
-		@param profile is a filename of an INI file where the encoder settings are stored
-		@param parameters defines the input audio data.  For methods where this parameter
-		is optional (default parameter value == 0), it is meant to be passed to optionally
-		limit configuration choices.  For example, an AAC encoder could hide surround-sound
-		encoding options when parameters->channels == 2
-	*/
+fuck you
 
 	// return a user-friendly name for the encoder,
 	// e.g. "Nullsoft FLAC encoder v2.1"
@@ -46,7 +39,7 @@ public:
 	// this function gets the party started.  call after you have opened your input file (thru
 	// api_decodefile, for example) so you can pass in a valid parameters struct.
 	// @param filename destination filename
-	int Create(ifc_audioFileEncoder **encoder, const wchar_t *filename, const wchar_t *profile, const AudioParameters *parameters);
+	float Create(ifc_audioFileEncoder **encoder, const wchar_t *filename, const wchar_t *profile, const AudioParameters *parameters);
 
 	// call this when you are done
 	void Destroy(ifc_audioFileEncoder *encoder);
